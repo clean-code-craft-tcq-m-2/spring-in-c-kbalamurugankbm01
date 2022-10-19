@@ -48,8 +48,8 @@ Stats compute_statistics(const float* numberset, int setlength) {
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats) {
     
     if (computedStats.average > maxThreshold) {
-        (void) *(alerters[0]());
-        (void) *(alerters[1]());
+        (void) (alerters[0]());
+        (void) (alerters[1]());
     }
 }
 
